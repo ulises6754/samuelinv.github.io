@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invitación de Fiesta y Bautizo de Samuel Pérez</title>
+	<style>
+		/* Estilos para la página */
+		body {
+			background-color: #F7F7F7;
+			font-family: Arial, sans-serif;
+		}
+		
+		.background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+		
+		.container {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: #FFFFFF;
+			padding: 20px;
+			border: 1px solid #DDDDDD;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		h1 {
+			font-size: 24px;
+			margin-bottom: 10px;
+			color: #4CAF50;
+		}
+		
+		p {
+			margin-bottom: 10px;
+		}
+		
+		button {
+			width: 100%;
+			height: 30px;
+			background-color: #4CAF50;
+			color: #FFFFFF;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			background-color: #3e8e41;
+		}
+		
+		/* Estilos para los elementos de Mario Bros */
+		.mario {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50px;
+			height: 50px;
+			background-image: url('mario.png');
+			background-size: cover;
+		}
+		
+		.luigi {
+			position: absolute;
+			top: 20%;
+			right: 50%;
+			transform: translateX(50%);
+			width: 50px;
+			height: 50px;
+			background-image: url('luigi.png');
+			background-size: cover;
+		}
+		
+		.coin {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: 20px;
+			height: 20px;
+			background-color: #FFD700;
+			border-radius: 50%;
+			animation: coin 2s infinite;
+		}
+		
+		@keyframes coin {
+			0% {
+				transform: translateX(-50%) translateY(-50%) scale(1);
+			}
+			50% {
+				transform: translateX(-50%) translateY(-50%) scale(1.2);
+			}
+			100% {
+				transform: translateX(-50%) translateY(-50%) scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Imagen de fondo -->
+	<img src="reino_champignon-background.jpg" alt="Fondo de Reino Champiñon" class="background">
+	
+	<!-- Contenedor principal -->
+	<div class="container">
+		<!-- Título de la invitación -->
+		<h1>¡Es hora de celebrar!</h1>
+		
+		<!-- Información de la fiesta -->
+		<p>¡Únete a nosotros para celebrar el bautizo y la fiesta de 4 años de Samuel Pérez!</p>
+		
+		<!-- Fecha y hora de la fiesta -->
+		<p>Fecha: 21 de septiembre 2024 </p>
+		<p>Hora: 2:00pm </p>
+		
+		<!-- Lugar de la fiesta -->
+		<p>Lugar: Zaragosa</p>
+		
+		<!-- Botón para RSVP -->
+		<button>RSVP</button>
+	</div>
+	
+	<!-- Imágenes de Mario y Luigi -->
+	<img src="mario.png" alt="Mario" class="mario">
+	<img src="luigi.png" alt="Luigi" class="luigi">
+	
+	<!-- Moneda -->
+	<div class="coin"></div>
+	
+	<script>
+		// Obtener elementos del DOM
+		const container = document.querySelector('.container');
+		const mario = document.querySelector('.mario');
+		const luigi = document.querySelector('.luigi');
+		const coin = document.querySelector('.coin');
+		const button = document.querySelector('button');
+		
+		// Agregar evento de clic al botón
+		button.addEventListener('click', () => {
+			// Mostrar
